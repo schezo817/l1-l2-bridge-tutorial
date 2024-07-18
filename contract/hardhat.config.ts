@@ -24,7 +24,7 @@ const config: HardhatUserConfig = {
       gasPrice: 3000000000
     },
     l2: {
-      url: "https://rpc.sandverse.oasys.games",
+      url: "https://rpc.testnet.verse.gesoten.com/",
       accounts: [DEPLOYER_KEY],
       initialBaseFeePerGas: 0,
       gasPrice: 0,
