@@ -27,6 +27,7 @@ const config: HardhatUserConfig = {
       url: "https://rpc.testnet.verse.gesoten.com/",
       accounts: [DEPLOYER_KEY],
       initialBaseFeePerGas: 0,
+      chainId: 42801,
       gasPrice: 0,
     },
   },
