@@ -161,7 +161,7 @@
                 amount = sdk.util.ethToWei(amount);
 
                 // deposit
-                const tx = await sdk.messenger.depositETH(100000000000000, { recipient, overrides: { from: userAccount }});
+                const tx = await sdk.messenger.depositETH(amount.toString(), { recipient, overrides: { from: userAccount }});
                 const receipt = await tx.wait();
                 console.log(receipt);
 
@@ -174,7 +174,7 @@
                 const balances = await sdk.getBalances(userAccount);
                 $('#ethMessage').removeClass('alert-info').addClass('alert-success').text(`Succeed deposit, L1 Balance: ${balances.l1.toString()}, L2 Balance: ${balances.l2.toString()}`);
             } catch (error) {
-                $('#ethMessage').removeClass('alert-info').addClass('alert-danger').text(`Error: ${error.message}`);
+                //$('#ethMessage').removeClass('alert-info').addClass('alert-danger').text(`Error: ${error.message}`);
             }
 
             // enable button
