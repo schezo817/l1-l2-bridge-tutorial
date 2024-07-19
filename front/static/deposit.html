@@ -117,11 +117,11 @@
 
 <script>
     // ----- Area Needs to Change depend on Verse -----
-    const l2RPC = "https://rpc.sandverse.oasys.games";
+    const l2RPC = "https://rpc.testnet.verse.gesoten.com/";
     const addressManager = "0xf1fCb5d5a604819e83118c0BBFe426aF6dD7B9a4"
-    const l1CrossDomainMessenger= "0xa04B03350eE9E3fdd1C2f63fAD5e0CabBb476594"
-    const l1StandardBridge = "0x9245e19eB88de2534E03E764FB2a5f194e6d97AD"
-    const l1ERC721Bridge = "0x8D736Ad22D106dE9Cf50D0D18D571041a47DD333"
+    const l1CrossDomainMessenger= "0xdAae45446d5024dC9EE542ffE4960d1024A0A210"
+    const l1StandardBridge = "0x1bDDCA94d34f31ecaBA5f1b4D8278294EFFB1b74"
+    const l1ERC721Bridge = "0xaaA704b47e296adCEeEe0A72176C13A8742373aF"
     const portalAddress = "0xd1F4638035B367D7874b6fdc118bFD44bF62FA42"
     const outputOracle = "0x018286121c03e7B8dB00fe5cd3CA3f9979c8F51d"
     // ----- Area Needs to Change depend on Verse -----
@@ -161,7 +161,7 @@
                 amount = sdk.util.ethToWei(amount);
 
                 // deposit
-                const tx = await sdk.messenger.depositETH(amount.toString(), { recipient, overrides: { from: userAccount }});
+                const tx = await sdk.messenger.depositETH(100000000000000, { recipient, overrides: { from: userAccount }});
                 const receipt = await tx.wait();
                 console.log(receipt);
 
