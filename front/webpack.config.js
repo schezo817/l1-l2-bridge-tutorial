@@ -15,6 +15,9 @@ module.exports = {
       }
     ]
   },
+  stats: {
+    errorDetails: true
+  },
   resolve: {
     extensions: ['.ts', '.js'],
     fallback: {
